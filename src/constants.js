@@ -1,5 +1,5 @@
 import Firebase from 'firebase'
 
-export const firebaseUrl = 'https://broad.firebaseio.com/'
+export const firebaseUrl = process.env.FIREBASE_URL
 
 export const broadRef = new Firebase(firebaseUrl)

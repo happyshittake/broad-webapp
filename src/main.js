@@ -1,10 +1,11 @@
+require('dotenv').config()
+require('es6-promise').polyfill()
+
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import { configRouter } from './router'
 import fastclick from 'fastclick'
-
-require('es6-promise').polyfill()
 
 Vue.use(VueRouter)
 

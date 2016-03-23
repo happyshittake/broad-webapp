@@ -1,9 +1,9 @@
 import fetch from 'isomorphic-fetch'
 import sha1 from 'sha1'
 
-const url = 'https://api.cloudinary.com/v1_1/ndjoe/image/upload'
-const secret = 'txJpfneYCl3bG8QJstx7SQA-z44'
-const apiKey = '189445788446525'
+const url = process.env.CLOUDINARY_URL
+const secret = process.env.CLOUDINARY_SECRET
+const apiKey = process.env.CLOUDINARY_KEY
 
 function generateSignature (timestamp) {
   const stringParam = `timestamp=${timestamp}${secret}`
