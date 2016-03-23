@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-12" v-for="c in listJalan">
+      <div class="col-md-12" v-for="c in roads">
         <card :url="c.imgUrl" :title="c.nama" :body="c.keterangan" :location="c.location"></card>
       </div>
     </div>
@@ -23,12 +23,17 @@
       }
     },
     ready () {
-      jalanRef.limitToLast(10).on('child_added', snap => {
+      jalanRef.limitToLast(50).on('child_added', snap => {
         this.listJalan.push(snap.val())
       })
     },
     components: {
       card
+    },
+    computed: {
+      roads () {
+        return this.listJalan.reverse()
+      }
     }
   }
 </script>

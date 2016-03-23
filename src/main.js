@@ -8,9 +8,7 @@ import fastclick from 'fastclick'
 
 Vue.use(VueRouter)
 
-let router = new VueRouter({
-  history: true
-})
+let router = new VueRouter()
 
 configRouter(router)
 

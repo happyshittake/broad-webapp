@@ -152,6 +152,7 @@
     max-width: 400px;
     margin: 0 auto;
     margin-top: 1em;
+    padding: 1.3rem;
   }
 
   map {

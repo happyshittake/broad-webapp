@@ -7,7 +7,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // whether to generate source map for production files.
 // disabling this can speed up the build.
-var SOURCE_MAP = false
+var SOURCE_MAP = true
 
 module.exports = merge(baseConfig, {
   stats: {
