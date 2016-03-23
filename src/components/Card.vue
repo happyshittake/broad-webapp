@@ -1,8 +1,20 @@
 <template>
-  <div class="row">
-    <div class="col-md-6">
+  <div class="row container-list">
+    <div class="col-md-6 col-md-offset-3">
+      <map
+          :center="location"
+          :zoom="15"
+          :options="option"
+          >
+        <marker
+          :position="location"
+          :clickable="false"
+          :draggable="false"
+        >
+        </marker>
+      </map>
       <div class="thumbnail">
-        <img :src="url"/>
+        <img :src="url" class="img-responsive" />
         <div class="caption">
           <h3>{{ title }}</h3>
           <p>
@@ -11,26 +23,18 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <map
-          :center.sync="location"
-          :zoom.sync="15">
-        <marker
-          :position.sync="location"
-          :clickable.sync="false"
-          :draggable.sync="false"
-        >
-        </marker>
-      </map>
-    </div>
   </div>
 </template>
 
 <style scoped>
   map {
     width:100%;
-    height: 400px;
+    height: 200px;
     display: block;
+  }
+
+  .container-list {
+    margin-top: 30px;
   }
 </style>
 
@@ -43,6 +47,14 @@
     components: {
       map: Map,
       marker: Marker
+    },
+    data () {
+      return {
+        option: {
+          disableDefaultUI: true,
+          draggable: false
+        }
+      }
     }
   }
 </script>

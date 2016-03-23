@@ -1,7 +1,7 @@
 {
   "name": "broad",
-  "version": "0.1.0",
-  "description": "A Vue.js project",
+  "version": "0.1.1",
+  "description": "aplikasi laporan jalan rusak",
   "author": "happyshittake <happyshittake@gmail.com>",
   "private": true,
   "scripts": {

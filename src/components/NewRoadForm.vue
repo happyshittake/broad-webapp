@@ -71,6 +71,7 @@
   import { uploadImage } from '../services/api'
   import { getLocation } from '../services/location'
   import { persistRoad } from '../services/firebase'
+  import { broadRef } from '../constants'
 
   export default {
     name: 'NewRoadForm',
@@ -131,6 +132,13 @@
         self.center.lat = self.location.lat = pos.coords.latitude || 10
         self.center.lng = self.location.lng = pos.coords.longitude || 10
       })
+    },
+    attached () {
+      const authData = broadRef.getAuth()
+      this.nama = authData[authData.provider].displayName
+    },
+    detached () {
+      this.nama = ''
     },
     components: {
       map: Map,

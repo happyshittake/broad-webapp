@@ -1,19 +1,21 @@
 <template>
   <div class="brand-header">
     <div class="brand-container">
-      <h1 class="brand-name">Broad</h1>
+      <img src="../assets/400x100black.png" class="img-responsive" alt="">
     </div>
   </div>
   <div class="main-content">
     <div class="nav-group">
       <div class="nav-item">
-        <a v-link="{path: '/baru'}" class="button-nav">
-          Laporan
+        <a v-link="{path: '/baru'}">
+          <img src="../assets/150x150laporan.png" class="img-responsive img-btn" alt="">
+          <span>Laporan</span>
         </a>
       </div>
       <div class="nav-item">
-        <a v-link="{path: '/data'}" class="button-nav">
-          Data
+        <a v-link="{path: '/data'}">
+          <img src="../assets/datainformasi.png" class="img-responsive img-btn" alt="">
+          <span>Data Informasi</span>
         </a>
       </div>
     </div>
@@ -33,7 +35,7 @@
 
 <style scoped>
   .brand-header {
-    background: #36A9DB;
+    background: #3EAFDA;
   }
 
   .brand-container {
@@ -46,6 +48,10 @@
   .brand-container > .brand-name {
     font-size: 3rem;
     font-weight: bold;
+  }
+
+  .brand-container > img {
+    margin: 0 auto;
   }
 
   .main-content {
@@ -70,13 +76,22 @@
     display: inline-block;
   }
 
+  .nav-item .img-btn {
+    margin: 0 auto;
+  }
+
+  .nav-item span {
+    font-size: 1.5rem;
+  }
+
   .button-nav {
     padding: .8em;
     font-size: 2.5rem;
     font-weight: bold;
     text-decoration: none;
-    background: #000;
+    background: #fff;
     border-radius: 10px;
+    border: 2px solid #3EAFDA;
   }
 
   .button-nav:hover {

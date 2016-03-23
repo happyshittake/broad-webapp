@@ -1,10 +1,13 @@
 <template>
   <div class="login_container">
+    <div class="brand-section">
+      <img src="../assets/400x100black.png" class="img-responsive" alt="">
+    </div>
     <div class="login_buttons">
-      <button class="btn blue" @click="loginWithTwitter">
+      <button class="btn btn-default" @click="loginWithTwitter">
         <i class="ion-social-twitter"></i> Login with twitter
       </button>
-      <button class="btn red" @click="loginWithFacebook">
+      <button class="btn btn-default" @click="loginWithFacebook">
         <i class="ion-social-facebook"></i> Login with facebook
       </button>
     </div>
@@ -17,6 +20,7 @@
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    flex-direction: column;
   }
 
   .login_buttons {
@@ -26,11 +30,16 @@
     flex-basis: 50%;
   }
 
+  .brand-section {
+    margin-bottom: 50px;
+    padding: 10px;
+  }
+
   .login_buttons > .btn {
     width: 100%;
     margin: 5px 0;
-    padding: 30px;
-    font-size: 4rem;
+    padding: 4rem;
+    font-size: 2rem;
   }
 </style>
 

@@ -6,8 +6,9 @@
 
 <script>
   import {load} from 'vue-google-maps'
+  import config from './secret.json'
 
-  load('AIzaSyBIGd93g6aZjz1HMHW--VVPwsdvHNF2dkw', '3.23')
+  load(config.maps_api_key, '3.23')
 
   export default {
     name: 'App'
@@ -18,7 +19,7 @@
   #app {
     min-height: 100vh;
     display: flex;
-    background: #43BCEA;
+    background: #fff;
     width: 100%;
     flex-direction: column;
   }
