@@ -1,9 +1,10 @@
 import fetch from 'isomorphic-fetch'
 import sha1 from 'sha1'
+import config from '../secret.json'
 
-const url = process.env.CLOUDINARY_URL
-const secret = process.env.CLOUDINARY_SECRET
-const apiKey = process.env.CLOUDINARY_KEY
+const url = config.cloudinary_url
+const secret = config.cloudinary_secret
+const apiKey = config.cloudinary_key
 
 function generateSignature (timestamp) {
   const stringParam = `timestamp=${timestamp}${secret}`

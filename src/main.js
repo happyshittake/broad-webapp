@@ -1,4 +1,3 @@
-require('dotenv').config()
 require('es6-promise').polyfill()
 
 import Vue from 'vue'
