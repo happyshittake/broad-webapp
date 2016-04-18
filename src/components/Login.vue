@@ -10,6 +10,9 @@
       <button class="btn btn-default" @click="loginWithFacebook">
         <i class="ion-social-facebook"></i> Login with facebook
       </button>
+      <a v-link={path:'/login-email'} class="btn btn-default">
+        <i class="ion-email"></i> Login with email
+      </a>
     </div>
   </div>
 </template>

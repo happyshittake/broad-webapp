@@ -8,10 +8,10 @@
   import {load} from 'vue-google-maps'
   import config from './secret.json'
 
-  load(config.maps_api_key, '3.23')
+  load(config.maps_api_key, '3.23', ['places'])
 
   export default {
-    name: 'App'
+    name: 'Broad'
   }
 </script>
 

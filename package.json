@@ -1,6 +1,6 @@
 {
   "name": "broad",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "aplikasi laporan jalan rusak",
   "author": "happyshittake <happyshittake@gmail.com>",
   "private": true,
@@ -20,7 +20,7 @@
     "isomorphic-fetch": "^2.2.1",
     "local-storage": "^1.4.2",
     "sha1": "^1.1.1",
-    "vue": "1.0.17",
+    "vue": "^1.0.17",
     "vue-google-maps": "^0.1.12",
     "vue-router": "^0.7.11",
     "vue-strap": "^1.0.7"

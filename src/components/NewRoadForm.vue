@@ -72,6 +72,7 @@
   import { getLocation } from '../services/location'
   import { persistRoad } from '../services/firebase'
   import { broadRef } from '../constants'
+  import Firebase from 'firebase'
 
   export default {
     name: 'NewRoadForm',
@@ -112,7 +113,9 @@
               alamat: newRoad.alamat,
               keterangan: newRoad.keterangan,
               imgUrl: body.url,
-              location: newRoad.location
+              location: newRoad.location,
+              status: false,
+              timestamp: Firebase.ServerValue.TIMESTAMP
             }
 
             persistRoad(data)
@@ -135,7 +138,7 @@
     },
     attached () {
       const authData = broadRef.getAuth()
-      this.nama = authData[authData.provider].displayName
+      authData.provider === 'password' ? this.nama = '' : this.nama = authData[authData.provider].displayName
     },
     detached () {
       this.nama = ''

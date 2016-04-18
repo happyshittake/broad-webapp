@@ -16,6 +16,9 @@ export function configRouter (router) {
     },
     '/login': {
       component: require('./components/Login.vue')
+    },
+    '/login-email': {
+      component: require('./components/EmailLogin.vue')
     }
   })
 
