@@ -7,7 +7,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // whether to generate source map for production files.
 // disabling this can speed up the build.
-var SOURCE_MAP = true
+var SOURCE_MAP = false
 
 module.exports = merge(baseConfig, {
   stats: {
@@ -45,7 +45,7 @@ module.exports = merge(baseConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: '../index.html',
+      filename: '../dist/index.html',
       template: 'index.html',
       inject: true,
       minify: {
